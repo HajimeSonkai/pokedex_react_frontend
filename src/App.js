@@ -13,3 +13,5 @@ function App() {
 }
 
 export default App;
+
+// Baseado no codigo do video do canal pasquadev: https://www.youtube.com/watch?v=n2kkXup2T1c&t=629s&ab_channel=pasquadev
