@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getpokemons, searchpokemonbyurl } from "./ApiConections.js/api";
+import { getpokemons, searchpokemon, searchpokemonbyurl } from "./ApiConections.js/api";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
@@ -10,7 +10,7 @@ function App() {
   
   const [loading, setLoading] = useState(true)
   const [pokemons, setPokemons] = useState([])
-  
+
   useEffect(() => {
     console.log("Carregando")
     fetchApi();
@@ -19,8 +19,9 @@ function App() {
   const fetchApi = async () => {
     try {
       const fetch = await getpokemons()
+      console.log(fetch)
       const promises = fetch.results.map(async (result) => {
-        return await searchpokemonbyurl(result.url)
+        return await searchpokemon(result.name)
       })
       const results = await Promise.all(promises)
       setPokemons(results)
