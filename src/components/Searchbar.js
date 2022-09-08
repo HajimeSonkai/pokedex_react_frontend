@@ -2,6 +2,7 @@ import "./Searchbar.css";
 import React from "react";
 import { useState } from "react";
 import { searchpokemon } from "../ApiConections.js/api";
+import Pokemoncard from "./Pokemoncard";
 
 const Searchbar = () => {
   const [search, setSearch] = useState();
@@ -40,10 +41,7 @@ const Searchbar = () => {
       </div>
       {pokemondata ? (
         <div>
-          <div>nome: {pokemondata.name}</div>
-          <div>numero: {pokemondata.id}</div>
-          <div>peso: {pokemondata.weight}</div>
-          <img src={pokemondata.sprites.front_default} alt={pokemondata.name} />
+          <Pokemoncard pokemon={pokemondata} />
         </div>
       ) : null}
     </div>
