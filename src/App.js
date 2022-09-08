@@ -1,5 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Pokedex from "./components/Pokedex";
 import Searchbar from "./components/Searchbar";
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div>
       <Navbar />
       <Searchbar />
-      <div className="App"></div>
+      <Pokedex />
     </div>
   );
 }
