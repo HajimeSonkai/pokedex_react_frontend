@@ -1,18 +1,29 @@
+import { useState } from "react";
 import React from "react";
 
 const Pokemoncard = (props) => {
+  
   const { pokemon } = props;
+  const normal = pokemon.sprites.front_default
+  const shiny = pokemon.sprites.front_shiny
+  const [picurl, setPicurl] = useState(normal)
   console.log("pokemon map:", pokemon)
+  
   const heart = "❤️"
   const clickheart = () => {
     console.log("favoritando")
+  }
+  
+  const shineShanger = () => {
+    if (picurl === normal) {setPicurl(shiny)}
+    else setPicurl(normal)
   }
 
   return (
     <div className="pokemon-card">
 
       <div className="pokemon-img-div">
-        <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+        <img onClick={shineShanger} src={picurl} alt={pokemon.name} />
       </div>
 
       <div className="card-body">
