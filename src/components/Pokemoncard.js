@@ -2,6 +2,7 @@ import React from "react";
 
 const Pokemoncard = (props) => {
   const { pokemon } = props;
+  console.log("pokemon map:", pokemon)
   const heart = "❤️"
   const clickheart = () => {
     console.log("favoritando")
