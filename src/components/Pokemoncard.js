@@ -26,9 +26,11 @@ const Pokemoncard = (props) => {
 
           <div className="pokemon-type">
             {pokemon.types.map((type, index) => {
+              let tipos = type.type.name
+              if (tipos === "bug") {tipos = "inceto"}
               return (
                 <div key={index} className="pokemon-type-txt">
-                  {type.type.name}
+                  tipo: {tipos}
                 </div>
               );
             })}
