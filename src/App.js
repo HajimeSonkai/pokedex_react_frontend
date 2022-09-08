@@ -7,12 +7,17 @@ import Searchbar from "./components/Searchbar";
 
 function App() {
 
-  const [loading, setLoading] = useState(false)
+  
+  const [loading, setLoading] = useState(true)
   const [pokemons, setPokemons] = useState([])
-
+  
+  useEffect(() => {
+    console.log("Carregando")
+    fetchApi();
+  }, []);
+  
   const fetchApi = async () => {
     try {
-      setLoading(true)
       const fetch = await getpokemons()
       const promises = fetch.results.map(async (result) => {
         return await searchpokemonbyurl(result.url)
@@ -26,10 +31,6 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    console.log("Carregando")
-    fetchApi();
-  }, []);
 
   return (
     <div>
