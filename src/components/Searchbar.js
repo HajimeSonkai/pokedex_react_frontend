@@ -19,6 +19,14 @@ const Searchbar = () => {
     console.log("pokeAPI achou: ", result);
   };
 
+  const onClickRandon = async () => {
+    const randoms = Math.floor(Math.random()*898+1)
+    console.log("procurando:", randoms);
+    const result = await searchpokemon(randoms);
+    setPokemondata(result);
+    console.log("pokeAPI achou: ", result);
+  };
+
   return (
     <div className="searchbar-container">
       <div className="searchbar">
@@ -26,6 +34,9 @@ const Searchbar = () => {
       </div>
       <div className="searchbar-btn">
         <button onClick={onClickHandler}>Buscar</button>
+      </div>
+      <div className="searchbar-btn">
+        <button onClick={onClickRandon}>random</button>
       </div>
       {pokemondata ? (
         <div>
