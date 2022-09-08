@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getpokemons } from "./ApiConections.js/api";
+import { getpokemons, searchpokemonbyurl } from "./ApiConections.js/api";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
@@ -13,10 +13,14 @@ function App() {
   const fetchApi = async () => {
     try {
       setLoading(true)
-      const result = await getpokemons()
-      setPokemons(result)
+      const fetch = await getpokemons()
+      const promises = fetch.results.map(async (result) => {
+        return await searchpokemonbyurl(result.url)
+      })
+      const results = await Promise.all(promises)
+      setPokemons(results)
       setLoading(false)
-      console.log("fetch result:", result)
+      console.log("fetch result:", results)
     } catch (error) {
       console.log("getPokemon Error:", error)
     }
@@ -31,7 +35,7 @@ function App() {
     <div>
       <Navbar />
       <Searchbar />
-      <Pokedex pokemons={pokemons.results} loading={loading} />
+      <Pokedex pokemons={pokemons} loading={loading} />
     </div>
   );
 }
