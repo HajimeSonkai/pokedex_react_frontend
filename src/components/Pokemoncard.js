@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import tradutor from "./tradutor";
 
 const Pokemoncard = (props) => {
   const { pokemon } = props;
@@ -39,13 +40,11 @@ const Pokemoncard = (props) => {
         <div className="card-botton">
           <div className="pokemon-type">
             {pokemon.types.map((type, index) => {
-              let tipos = type.type.name;
-              if (tipos === "bug") {
-                tipos = "inceto";
-              }
+              let tipo = type.type.name;
+              tipo = tradutor(tipo)
               return (
                 <div key={index} className="pokemon-type-txt">
-                  tipo: {tipos}
+                  tipo: {tipo}
                 </div>
               );
             })}
