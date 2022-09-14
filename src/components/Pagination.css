@@ -3,3 +3,12 @@
   flex-direction: row;
   align-items: center;
 }
+
+.pagination-container button {
+  border: none;
+  background-color: white;
+  box-shadow: 0.25px 0.25px rgba(0, 0, 0, 0.25);
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 2px;
+}
