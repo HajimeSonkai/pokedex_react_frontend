@@ -6,6 +6,7 @@ import Pokedex from "./components/Pokedex";
 import Searchbar from "./components/Searchbar";
 import { FavoritedProvider } from "./contexts/favoritContext";
 const favoritedKey = "f"
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [pokemons, setPokemons] = useState([]);
@@ -63,7 +64,7 @@ function App() {
         updateFavoritedPokemons: updateFavoritedPokemons,
       }}
     >
-      <div>
+      <div className="App">
         <Navbar />
         <Searchbar />
         <Pokedex
@@ -73,6 +74,7 @@ function App() {
           setPage={setPage}
           totalPages={totalPages}
         />
+        <div className="ref">Baseado no video do canal Pasquadev: <a href={"https://www.youtube.com/watch?v=n2kkXup2T1c&t=5338s&ab_channel=pasquadev"}>Pokedex com API, React hooks, useState, useContext, localStorage</a></div>
       </div>
     </FavoritedProvider>
   );
