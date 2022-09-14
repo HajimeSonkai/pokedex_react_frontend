@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import tradutor from "./tradutor";
+import tradutor from "../extras/tradutor";
 
 const Pokemoncard = (props) => {
   const { pokemon } = props;
