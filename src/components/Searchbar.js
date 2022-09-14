@@ -21,7 +21,7 @@ const Searchbar = () => {
   };
 
   const onClickRandon = async () => {
-    const randoms = Math.floor(Math.random()*898+1)
+    const randoms = Math.floor(Math.random() * 898 + 1);
     console.log("procurando:", randoms);
     const result = await searchpokemon(randoms);
     setPokemondata(result);

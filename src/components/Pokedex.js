@@ -4,7 +4,7 @@ import Pokemoncard from "./Pokemoncard";
 
 const Pokedex = (props) => {
   const { pokemons, loading } = props;
-  console.log("pokemons carregados:", pokemons)
+  console.log("pokemons carregados:", pokemons);
   return (
     <div>
       <div className="pokedex-header">
@@ -17,9 +17,7 @@ const Pokedex = (props) => {
         <div className="pokedex-grid">
           {pokemons &&
             pokemons.map((pokemon, index) => {
-              return (
-                  <Pokemoncard key={index} pokemon={pokemon} />
-              );
+              return <Pokemoncard key={index} pokemon={pokemon} />;
             })}
         </div>
       )}
