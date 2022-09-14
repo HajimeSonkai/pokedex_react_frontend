@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 
 const Pokemoncard = (props) => {
@@ -14,6 +14,11 @@ const Pokemoncard = (props) => {
     console.log("favoritando")
   }
   
+  useEffect(() => {
+    console.log("Carregando")
+    setPicurl(normal);
+  }, [normal]);
+
   const shineShanger = () => {
     if (picurl === normal) {setPicurl(shiny)}
     else setPicurl(normal)
