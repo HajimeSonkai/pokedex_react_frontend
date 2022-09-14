@@ -1,17 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import React from "react";
 import tradutor from "../extras/tradutor";
 import "./Pokemoncard.css"
+import FavoriteContext from "../contexts/favoritContext";
 const Pokemoncard = (props) => {
+  const { favoritedPokemons, updateFavoritedPokemons } = useContext(FavoriteContext)
   const { pokemon } = props;
   const normal = pokemon.sprites.front_default;
   const shiny = pokemon.sprites.front_shiny;
   const [picurl, setPicurl] = useState(normal);
   console.log("pokemon map:", pokemon);
 
-  const heart = "❤️";
+  const heart = favoritedPokemons.includes(pokemon.name)? "❤️" : "💔️";
   const clickheart = () => {
     console.log("favoritando");
+    updateFavoritedPokemons(pokemon.name)
   };
 
   useEffect(() => {
