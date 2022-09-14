@@ -8,15 +8,19 @@ import Searchbar from "./components/Searchbar";
 function App() {
   const [loading, setLoading] = useState(true);
   const [pokemons, setPokemons] = useState([]);
+  const [page, setPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
+
+  const itensperpage = 18
 
   useEffect(() => {
     console.log("Carregando");
-    fetchApi();
-  }, []);
+    fetchApi(itensperpage, page);
+  }, [page]);
 
-  const fetchApi = async () => {
+  const fetchApi = async (itensperpage, page) => {
     try {
-      const fetch = await getpokemons();
+      const fetch = await getpokemons(itensperpage, itensperpage*page);
       console.log(fetch);
       const promises = fetch.results.map(async (result) => {
         return await searchpokemon(result.name);
@@ -24,6 +28,7 @@ function App() {
       const results = await Promise.all(promises);
       setPokemons(results);
       setLoading(false);
+      setTotalPages(Math.ceil(fetch.count / itensperpage))
       console.log("fetch result:", results);
     } catch (error) {
       console.log("getPokemon Error:", error);
@@ -34,7 +39,13 @@ function App() {
     <div>
       <Navbar />
       <Searchbar />
-      <Pokedex pokemons={pokemons} loading={loading} />
+      <Pokedex
+        pokemons={pokemons}
+        loading={loading}
+        page={page}
+        setPage={setPage}
+        totalPages={totalPages}
+      />
     </div>
   );
 }
