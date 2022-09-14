@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import Searchbar from "./components/Searchbar";
 import { FavoritedProvider } from "./contexts/favoritContext";
-
+const favoritedKey = "f"
 function App() {
   const [loading, setLoading] = useState(true);
   const [pokemons, setPokemons] = useState([]);
@@ -19,6 +19,15 @@ function App() {
     console.log("Carregando");
     fetchApi(itensperpage, page);
   }, [page]);
+
+  const loadFavoritedPokemons = () => {
+    const pokefav = JSON.parse(window.localStorage.getItem(favoritedKey)) || []
+    setFavorites(pokefav)
+  }
+
+  useEffect(() => {
+    loadFavoritedPokemons()
+  }, []);
 
   const fetchApi = async (itensperpage, page) => {
     try {
@@ -43,6 +52,7 @@ function App() {
     if (favoriteIndex >= 0) {
       updateFavorites.splice(favoriteIndex, 1)
     } else { updateFavorites.push(name) }
+    window.localStorage.setItem(favoritedKey, JSON.stringify(updateFavorites))
     setFavorites(updateFavorites)
   }
 
