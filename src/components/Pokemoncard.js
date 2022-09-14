@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import tradutor from "../extras/tradutor";
-
+import "./Pokemoncard.css"
 const Pokemoncard = (props) => {
   const { pokemon } = props;
   const normal = pokemon.sprites.front_default;
@@ -28,13 +28,13 @@ const Pokemoncard = (props) => {
   return (
     <div className="pokemon-card">
       <div className="pokemon-img-div">
-        <img onClick={shineShanger} src={picurl} alt={pokemon.name} />
+        <img onClick={shineShanger} src={picurl} alt={pokemon.name} className={"pokemon-image"} />
       </div>
 
       <div className="card-body">
         <div className="card-top">
           <h3>{pokemon.name}</h3>
-          <div>numero: {pokemon.id}</div>
+          <div>#{pokemon.id}</div>
         </div>
 
         <div className="card-botton">
@@ -44,7 +44,7 @@ const Pokemoncard = (props) => {
               tipo = tradutor(tipo)
               return (
                 <div key={index} className="pokemon-type-txt">
-                  tipo: {tipo}
+                  {tipo}
                 </div>
               );
             })}
