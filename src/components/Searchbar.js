@@ -2,6 +2,7 @@ import "./Searchbar.css";
 import React from "react";
 import { useState } from "react";
 import { searchpokemon } from "../ApiConections.js/api";
+import Pokemoncard from "./Pokemoncard";
 
 const Searchbar = () => {
   const [search, setSearch] = useState();
@@ -19,6 +20,14 @@ const Searchbar = () => {
     console.log("pokeAPI achou: ", result);
   };
 
+  const onClickRandon = async () => {
+    const randoms = Math.floor(Math.random() * 898 + 1);
+    console.log("procurando:", randoms);
+    const result = await searchpokemon(randoms);
+    setPokemondata(result);
+    console.log("pokeAPI achou: ", result);
+  };
+
   return (
     <div className="searchbar-container">
       <div className="searchbar">
@@ -27,12 +36,12 @@ const Searchbar = () => {
       <div className="searchbar-btn">
         <button onClick={onClickHandler}>Buscar</button>
       </div>
+      <div className="searchbar-btn">
+        <button onClick={onClickRandon}>random</button>
+      </div>
       {pokemondata ? (
         <div>
-          <div>nome: {pokemondata.name}</div>
-          <div>numero: {pokemondata.id}</div>
-          <div>peso: {pokemondata.weight}</div>
-          <img src={pokemondata.sprites.front_default} alt={pokemondata.name} />
+          <Pokemoncard pokemon={pokemondata} />
         </div>
       ) : null}
     </div>
