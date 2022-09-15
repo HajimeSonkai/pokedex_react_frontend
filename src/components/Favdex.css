@@ -1,0 +1,22 @@
+.favdex-body {
+    width: auto;
+}
+
+.favdex-header {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.favdex-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.favdex-total {
+    font-size: 30px;
+    padding: 10px;
+}

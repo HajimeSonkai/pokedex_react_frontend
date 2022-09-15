@@ -3,7 +3,8 @@
 }
 
 nav {
-  height: 100px;
+  width:fit-content;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content:center;
