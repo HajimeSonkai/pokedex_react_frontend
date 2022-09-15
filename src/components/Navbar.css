@@ -3,7 +3,7 @@
 }
 
 nav {
-  width:fit-content;
+  width: auto;
   height: auto;
   display: flex;
   flex-direction: row;
