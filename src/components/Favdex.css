@@ -1,17 +1,22 @@
-.pokedex-body {
+.favdex-body {
     width: auto;
 }
 
-.pokedex-header {
+.favdex-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:flex-start;
     align-items: center;
     padding: 10px;
 }
 
-.pokedex-grid {
+.favdex-grid {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.favdex-total {
+    font-size: 30px;
+    padding: 10px;
 }

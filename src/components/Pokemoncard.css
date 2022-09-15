@@ -1,4 +1,78 @@
-.pokemon-card {
+.pokemon-fire-card {
+  background-color: red;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-grass-card {
+  background-color: green;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-water-card {
+  background-color: blue;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-bug-card {
+  background-color: lightgreen;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-normal-card {
+  background-color: lightsalmon;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-poison-card {
+  background-color: purple;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-electric-card {
+  background-color: yellow;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-ground-card {
+  background-color: brown;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-bug-card {
+  background-color: lightgreen;
+  width: auto;
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemon-fairy-card {
+  background-color: pink;
+  width: auto;
   display: flex;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
@@ -12,7 +86,7 @@
 }
 
 .pokemon-img-div {
-  padding: 0px 5px;
+  width: auto;
 }
 
 .card-body {
@@ -45,9 +119,23 @@
   display: flex;
 }
 
-.pokemon-type-txt {
-  margin-right: 10px;
+.pokemon-type p {
+  padding: 4px;
   text-transform: capitalize;
+}
+
+.pokemon-fogo-txt {
+  margin: 2px;
+  border-radius: 10px;
+  color: red;
+  background-color: black;
+}
+
+.pokemon-metal-txt {
+  margin: 2px;
+  border-radius: 10px;
+  color: silver;
+  background-color: black;
 }
 
 .fav-button {

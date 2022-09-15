@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getpokemons, searchpokemon } from "./ApiConections.js/api";
 import "./App.css";
+import Bottonfav from "./components/Bottonfav";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import Searchbar from "./components/Searchbar";
@@ -14,7 +15,7 @@ function App() {
   const [totalPages, setTotalPages] = useState(0);
   const [favorites, setFavorites] = useState([]);
 
-  const itensperpage = 18;
+  const itensperpage = 35;
 
   useEffect(() => {
     console.log("Carregando");
@@ -74,6 +75,7 @@ function App() {
           setPage={setPage}
           totalPages={totalPages}
         />
+        <Bottonfav />
         <div className="ref">Baseado no video do canal Pasquadev: <a href={"https://www.youtube.com/watch?v=n2kkXup2T1c&t=5338s&ab_channel=pasquadev"}>Pokedex com API, React hooks, useState, useContext, localStorage</a></div>
       </div>
     </FavoritedProvider>

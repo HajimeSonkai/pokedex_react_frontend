@@ -9,7 +9,7 @@ const Pokemoncard = (props) => {
   const normal = pokemon.sprites.front_default;
   const shiny = pokemon.sprites.front_shiny;
   const [picurl, setPicurl] = useState(normal);
-  console.log("pokemon map:", pokemon);
+  console.log("pokemon map:", pokemon.types[0].type.name);
 
   const heart = favoritedPokemons.includes(pokemon.name)? "❤️" : "💔️";
   const clickheart = () => {
@@ -29,7 +29,7 @@ const Pokemoncard = (props) => {
   };
 
   return (
-    <div className="pokemon-card">
+    <div className={`pokemon-${pokemon.types[0].type.name}-card`}>
       <div className="pokemon-img-div">
         <img onClick={shineShanger} src={picurl} alt={pokemon.name} className={"pokemon-image"} />
       </div>
@@ -46,8 +46,8 @@ const Pokemoncard = (props) => {
               let tipo = type.type.name;
               tipo = tradutor(tipo)
               return (
-                <div key={index} className="pokemon-type-txt">
-                  {tipo}
+                <div key={index} className={`pokemon-${tipo}-txt`}>
+                  <p>{tipo}</p>
                 </div>
               );
             })}
