@@ -557,6 +557,39 @@
   border-radius: 10px;
 }
 
+/* flying type card */
+.pokemon-flying-card {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Pok%C3%A9mon_Flying_Type_Icon.svg");
+  background-color: rgba(137,170,227,255);
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 200px;
+  background-position: 70px;
+  background-position-y: -60px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.pokemon-flying-card .pokemon-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Pok%C3%A9mon_Flying_Type_Icon.svg");
+  background-color: rgba(137,170,227,255);
+  background-blend-mode: lighten;
+  width: 70px;
+  height: 70px;
+  cursor: zoom-in;
+  justify-self: center;
+  display: block;
+  margin-top: 2px;
+  margin-right: 10px;
+  padding: 1px 2px 1px 1px;
+  border-radius: 10px;
+}
+
 .pokemon-img-div {
   width: auto;
   justify-self: center;
@@ -871,6 +904,21 @@
   }
 
   .pokemon-steel-card .pokemon-image {
+    width: 148px;
+    height: 148px;
+    margin-top: 0px;
+    margin-right: 10px;
+    padding: 0px;
+  }
+
+  .pokemon-flying-card {
+    width: 480px;
+    background-size: 400px;
+    background-position: 140px;
+    /* background-position-y: -100px; */
+  }
+
+  .pokemon-flying-card .pokemon-image {
     width: 148px;
     height: 148px;
     margin-top: 0px;
