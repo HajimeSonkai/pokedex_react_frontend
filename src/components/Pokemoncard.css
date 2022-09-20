@@ -2,9 +2,10 @@
 .pokemon-grass-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f6/Pok%C3%A9mon_Grass_Type_Icon.svg");
   background-color: rgba(56, 191, 75, 255);
-  background-repeat: repeat;
-  background-blend-mode: soft-light;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: lighten; */
+  background-size: 200px;
+  background-position: 70px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -33,9 +34,11 @@
 .pokemon-fire-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/Pok%C3%A9mon_Fire_Type_Icon.svg");
   background-color: rgba(255, 151, 65, 255);
-  background-repeat: repeat;
-  background-blend-mode: soft-light;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: lighten; */
+  background-size: 200px;
+  background-position: 60px;
+  background-position-y: -30px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -64,9 +67,11 @@
 .pokemon-water-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Pok%C3%A9mon_Water_Type_Icon.svg");
   background-color: rgba(54, 146, 220, 255);
-  background-repeat: repeat;
-  background-blend-mode: soft-light;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 200px;
+  background-position: 70px;
+  background-position-y: -90px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -95,9 +100,11 @@
 .pokemon-bug-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Pok%C3%A9mon_Bug_Type_Icon.svg");
   background-color: rgba(131, 195, 0, 255);
-  background-repeat: repeat;
-  background-blend-mode: soft-light;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 200px;
+  background-position: 70px;
+  background-position-y: -50px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -126,9 +133,11 @@
 .pokemon-normal-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/aa/Pok%C3%A9mon_Normal_Type_Icon.svg");
   background-color: rgba(145, 154, 162, 255);
-  background-repeat: repeat;
-  background-blend-mode: soft-light;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 200px;
+  background-position: 70px;
+  background-position-y: -90px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -157,9 +166,11 @@
 .pokemon-poison-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c4/Pok%C3%A9mon_Poison_Type_Icon.svg");
   background-color: rgba(181,103,206,255);
-  background-repeat: repeat;
-  background-blend-mode: soft-light;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 200px;
+  background-position: 70px;
+  background-position-y: -90px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -188,9 +199,10 @@
 .pokemon-electric-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg");
   background-color: rgba(251,209,0,255);
-  background-repeat: repeat;
-  background-blend-mode: multiply;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: multiply; */
+  background-size: 200px;
+  background-position: 70px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -219,9 +231,11 @@
 .pokemon-ground-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8d/Pok%C3%A9mon_Ground_Type_Icon.svg");
   background-color: rgba(232,114,54,255);
-  background-repeat: repeat;
-  background-blend-mode: soft-light;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 200px;
+  background-position: 70px;
+  /* background-position-y: -90px; */
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -250,9 +264,11 @@
 .pokemon-fairy-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Pok%C3%A9mon_Fairy_Type_Icon.svg");
   background-color: rgba(251,137,235,255);
-  background-repeat: repeat;
-  background-blend-mode: soft-light;
-  background-size: 37px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 200px;
+  background-position: 70px;
+  background-position-y: -90px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -265,6 +281,39 @@
 .pokemon-fairy-card .pokemon-image {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Pok%C3%A9mon_Fairy_Type_Icon.svg");
   background-color: rgba(251,137,235,255);
+  background-blend-mode: lighten;
+  width: 70px;
+  height: 70px;
+  cursor: zoom-in;
+  justify-self: center;
+  display: block;
+  margin-top: 2px;
+  margin-right: 10px;
+  padding: 1px 2px 1px 1px;
+  border-radius: 10px;
+}
+
+/* Fighting type card */
+.pokemon-fighting-card {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/be/Pok%C3%A9mon_Fighting_Type_Icon.svg");
+  background-color: rgba(224,48,106,255);
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 200px;
+  background-position: 70px;
+  /* background-position-y: -90px; */
+  margin-left: 5px;
+  margin-right: 5px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.pokemon-fighting-card .pokemon-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/be/Pok%C3%A9mon_Fighting_Type_Icon.svg");
+  background-color: rgba(224,48,106,255);
   background-blend-mode: lighten;
   width: 70px;
   height: 70px;
@@ -346,6 +395,8 @@
 @media screen and (max-width: 509px) {
   .pokemon-grass-card {
     width: 480px;
+    background-size: 400px;
+    background-position: 140px;
   }
 
   .pokemon-grass-card .pokemon-image {
@@ -445,6 +496,18 @@
   }
 
   .pokemon-fairy-card .pokemon-image {
+    width: 148px;
+    height: 148px;
+    margin-top: 0px;
+    margin-right: 10px;
+    padding: 0px;
+  }
+
+  .pokemon-fighting-card {
+    width: 480px;
+  }
+
+  .pokemon-fighting-card .pokemon-image {
     width: 148px;
     height: 148px;
     margin-top: 0px;
