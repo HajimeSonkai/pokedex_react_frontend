@@ -15,7 +15,8 @@ const Searchbar = () => {
 
   const onClickHandler = async () => {
     console.log("procurando:", search);
-    const result = await searchpokemon(search);
+    const lower = search.toLowerCase()
+    const result = await searchpokemon(lower);
     setPokemondata(result);
     console.log("pokeAPI achou: ", result);
   };
