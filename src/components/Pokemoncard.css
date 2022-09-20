@@ -656,6 +656,125 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 769px) {
+  .pokemon-grass-card {
+    width: auto;
+    background-position: 50px;
+    background-size: 400px;
+  }
+
+  .pokemon-fire-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+  }
+
+  .pokemon-water-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    background-position-y: -220px;
+  }
+
+  .pokemon-bug-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    background-position-y: -100px;
+  }
+
+  .pokemon-poison-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    background-position-y: -250px;
+  }
+
+  .pokemon-electric-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    background-position-y: -150px;
+  }
+
+  .pokemon-ground-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    background-position-y: -100px;
+  }
+
+  .pokemon-fairy-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -190px; */
+  }
+
+  .pokemon-fighting-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -100px; */
+  }
+
+  .pokemon-psychic-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -100px; */
+  }
+
+  .pokemon-rock-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -100px; */
+  }
+
+  .pokemon-ghost-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -100px; */
+  }
+
+  .pokemon-ice-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -70px; */
+  }
+
+  .pokemon-dragon-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -70px; */
+  }
+
+  .pokemon-dark-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -70px; */
+  }
+
+  .pokemon-steel-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -70px; */
+  }
+
+  .pokemon-flying-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+    /* background-position-y: -70px; */
+  }
+}
+
 @media screen and (max-width: 509px) {
   .pokemon-grass-card {
     width: 480px;
