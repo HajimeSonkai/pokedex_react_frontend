@@ -184,13 +184,35 @@
   border-radius: 10px;
 }
 
+/* Electric type card */
 .pokemon-electric-card {
-  background-color: yellow;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg");
+  background-color: rgba(251,209,0,255);
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+  background-size: 37px;
+  margin-left: 5px;
+  margin-right: 5px;
   width: auto;
   display: flex;
+  flex-direction: row;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  width: auto;
+  border-radius: 10px;
+}
+
+.pokemon-electric-card .pokemon-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Pok%C3%A9mon_Electric_Type_Icon.svg");
+  background-color: rgba(251,209,0,255);
+  background-blend-mode: lighten;
+  width: 70px;
+  height: 70px;
+  cursor: zoom-in;
+  justify-self: center;
+  display: block;
+  margin-top: 2px;
+  margin-right: 10px;
+  padding: 1px 2px 1px 1px;
+  border-radius: 10px;
 }
 
 .pokemon-ground-card {
@@ -350,6 +372,18 @@
   }
 
   .pokemon-poison-card .pokemon-image {
+    width: 148px;
+    height: 148px;
+    margin-top: 0px;
+    margin-right: 10px;
+    padding: 0px;
+  }
+
+  .pokemon-electric-card {
+    width: 480px;
+  }
+
+  .pokemon-electric-card .pokemon-image {
     width: 148px;
     height: 148px;
     margin-top: 0px;
