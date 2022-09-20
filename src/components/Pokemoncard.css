@@ -246,13 +246,35 @@
   border-radius: 10px;
 }
 
+/* Fairy type card */
 .pokemon-fairy-card {
-  background-color: pink;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Pok%C3%A9mon_Fairy_Type_Icon.svg");
+  background-color: rgba(251,137,235,255);
+  background-repeat: repeat;
+  background-blend-mode: soft-light;
+  background-size: 37px;
+  margin-left: 5px;
+  margin-right: 5px;
   width: auto;
   display: flex;
+  flex-direction: row;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  width: auto;
+  border-radius: 10px;
+}
+
+.pokemon-fairy-card .pokemon-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Pok%C3%A9mon_Fairy_Type_Icon.svg");
+  background-color: rgba(251,137,235,255);
+  background-blend-mode: lighten;
+  width: 70px;
+  height: 70px;
+  cursor: zoom-in;
+  justify-self: center;
+  display: block;
+  margin-top: 2px;
+  margin-right: 10px;
+  padding: 1px 2px 1px 1px;
+  border-radius: 10px;
 }
 
 .pokemon-img-div {
@@ -411,6 +433,18 @@
   }
 
   .pokemon-ground-card .pokemon-image {
+    width: 148px;
+    height: 148px;
+    margin-top: 0px;
+    margin-right: 10px;
+    padding: 0px;
+  }
+
+  .pokemon-fairy-card {
+    width: 480px;
+  }
+
+  .pokemon-fairy-card .pokemon-image {
     width: 148px;
     height: 148px;
     margin-top: 0px;
