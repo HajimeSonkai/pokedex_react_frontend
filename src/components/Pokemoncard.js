@@ -31,7 +31,7 @@ const Pokemoncard = (props) => {
 
   return (
     <div className="outer-card">
-      {pokemon.types.length === 1 ? (
+      {pokemon.types ? (
         <div className={`pokemon-${pokemon.types[0].type.name}-card`}>
           <div className="pokemon-img-div">
             <img
@@ -66,44 +66,46 @@ const Pokemoncard = (props) => {
             </div>
           </div>
         </div>
-      ) : (
-        <div className={`pokemon-${pokemon.types[1].type.name}-card-second`}>
-          <div className={`pokemon-${pokemon.types[0].type.name}-card-first`}>
-          <div className="pokemon-img-div">
-            <img
-              onClick={shineShanger}
-              src={picurl}
-              alt={pokemon.name}
-              className={"pokemon-image"}
-            />
-          </div>
+      ) : ( null
+      
+      //   <div className={`pokemon-${pokemon.types[1].type.name}-card-second`}>
+      //     <div className={`pokemon-${pokemon.types[0].type.name}-card-first`}>
+      //     <div className="pokemon-img-div">
+      //       <img
+      //         onClick={shineShanger}
+      //         src={picurl}
+      //         alt={pokemon.name}
+      //         className={"pokemon-image"}
+      //       />
+      //     </div>
 
-          <div className="card-body">
-            <div className="card-top">
-              <h3>{pokemon.name}</h3>
-              <div>#{pokemon.id}</div>
-            </div>
+      //     <div className="card-body">
+      //       <div className="card-top">
+      //         <h3>{pokemon.name}</h3>
+      //         <div>#{pokemon.id}</div>
+      //       </div>
             
-            <div className="card-botton">
-              <div className="pokemon-type">
-                {pokemon.types.map((type, index) => {
-                  let tipo = type.type.name;
-                  tipo = tradutor(tipo);
-                  return (
-                    <div key={index} className={`pokemon-${tipo}-txt`}>
-                      <p>{tipo}</p>
-                    </div>
-                  );
-                })}
-              </div>
-              <button className="fav-button" onClick={clickheart}>
-                {heart}
-              </button>
-            </div>
-          </div>
-          </div>
-        </div>
-      )}
+      //       <div className="card-botton">
+      //         <div className="pokemon-type">
+      //           {pokemon.types.map((type, index) => {
+      //             let tipo = type.type.name;
+      //             tipo = tradutor(tipo);
+      //             return (
+      //               <div key={index} className={`pokemon-${tipo}-txt`}>
+      //                 <p>{tipo}</p>
+      //               </div>
+      //             );
+      //           })}
+      //         </div>
+      //         <button className="fav-button" onClick={clickheart}>
+      //           {heart}
+      //         </button>
+      //       </div>
+      //     </div>
+      //     </div>
+      //   </div>
+      )
+      }
     </div>
   );
 };
