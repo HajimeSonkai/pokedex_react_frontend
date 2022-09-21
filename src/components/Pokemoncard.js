@@ -44,8 +44,13 @@ const Pokemoncard = (props) => {
 
           <div className="card-body">
             <div className="card-top">
-              <h3>{pokemon.name}</h3>
-              <div>#{pokemon.id}</div>
+              <div className="nameandheart">
+              <h3>{tradutor(pokemon.name)}</h3>
+              <button className="fav-button" onClick={clickheart}>
+                {heart}
+              </button>
+              </div>
+              <div className="id"><p>#{pokemon.id}</p></div>
             </div>
 
             <div className="card-botton">
@@ -54,15 +59,12 @@ const Pokemoncard = (props) => {
                   let tipo = type.type.name;
                   tipo = tradutor(tipo);
                   return (
-                    <div key={index} className={`pokemon-${tipo}-txt`}>
+                    <div key={index} className={`pokemon-${type.type.name}-txt`}>
                       <p>{tipo}</p>
                     </div>
                   );
                 })}
               </div>
-              <button className="fav-button" onClick={clickheart}>
-                {heart}
-              </button>
             </div>
           </div>
         </div>
