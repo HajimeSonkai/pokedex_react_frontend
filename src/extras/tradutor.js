@@ -67,6 +67,9 @@ const tradutor = (tipo) => {
     tipo = "noturno";
     return tipo;
   }
+  if (tipo.includes("-") ) {
+    return tipo.split("-", 1)[0]
+  }
   else return tipo;
 };
 
