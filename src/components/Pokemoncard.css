@@ -1,3 +1,9 @@
+/* .outer-card {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+} */
+
 /* Grass type card */
 .pokemon-grass-card {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f6/Pok%C3%A9mon_Grass_Type_Icon.svg");
@@ -15,6 +21,22 @@
   border-radius: 10px;
 }
 
+.pokemon-grass-card-first {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f6/Pok%C3%A9mon_Grass_Type_Icon.svg");
+  background-color: rgba(56, 191, 75, 255);
+  background-repeat: no-repeat;
+  /* background-blend-mode: lighten; */
+  background-size: 150px;
+  background-position: 30px;
+  /* margin-left: 5px; */
+  /* margin-right: 5px; */
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); */
+  border-radius: 10px 0px 0px 10px;
+}
+
 .pokemon-grass-card .pokemon-image {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f6/Pok%C3%A9mon_Grass_Type_Icon.svg");
   background-color: rgba(56, 191, 75, 255);
@@ -28,6 +50,21 @@
   margin-right: 10px;
   padding: 1px 2px 1px 1px;
   border-radius: 10px;
+}
+
+.pokemon-grass-card-first .pokemon-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f6/Pok%C3%A9mon_Grass_Type_Icon.svg");
+  background-color: rgba(56, 191, 75, 255);
+  background-blend-mode: lighten;
+  width: 70px;
+  height: 70px;
+  cursor: zoom-in;
+  justify-self: center;
+  display: block;
+  margin-top: 2px;
+  margin-right: 10px;
+  padding: 1px 2px 1px 1px;
+  border-radius: 50px;
 }
 
 /* Fire type card */
@@ -48,7 +85,38 @@
   border-radius: 10px;
 }
 
+.pokemon-fire-card-first {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/Pok%C3%A9mon_Fire_Type_Icon.svg");
+  background-color: rgba(255, 151, 65, 255);
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  background-size: 150px;
+  background-position: 30px;
+  /* margin-left: 5px; */
+  margin-right: 5px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); */
+  border-radius: 10px 0px 0px 10px;
+}
+
 .pokemon-fire-card .pokemon-image {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/Pok%C3%A9mon_Fire_Type_Icon.svg");
+  background-color: rgba(255, 151, 65, 255);
+  background-blend-mode: lighten;
+  width: 70px;
+  height: 70px;
+  cursor: zoom-in;
+  justify-self: center;
+  display: block;
+  margin-top: 2px;
+  margin-right: 10px;
+  padding: 1px 2px 1px 1px;
+  border-radius: 10px;
+}
+
+.pokemon-fire-card-first .pokemon-image {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/56/Pok%C3%A9mon_Fire_Type_Icon.svg");
   background-color: rgba(255, 151, 65, 255);
   background-blend-mode: lighten;
@@ -171,6 +239,23 @@
   background-size: 200px;
   background-position: 70px;
   background-position-y: -90px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.pokemon-poison-card-second {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c4/Pok%C3%A9mon_Poison_Type_Icon.svg");
+  background-color: rgba(181,103,206,255);
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 150px;
+  background-position: 100px;
+  background-position-y: -60px;
   margin-left: 5px;
   margin-right: 5px;
   width: auto;
@@ -575,6 +660,23 @@
   border-radius: 10px;
 }
 
+.pokemon-flying-card-second {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Pok%C3%A9mon_Flying_Type_Icon.svg");
+  background-color: rgba(137,170,227,255);
+  background-repeat: no-repeat;
+  /* background-blend-mode: soft-light; */
+  background-size: 150px;
+  background-position: 100px;
+  background-position-y: -40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
 .pokemon-flying-card .pokemon-image {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Pok%C3%A9mon_Flying_Type_Icon.svg");
   background-color: rgba(137,170,227,255);
@@ -630,6 +732,7 @@
 }
 
 .pokemon-type p {
+  font-weight:bold;
   padding: 4px;
   text-transform: capitalize;
 }
