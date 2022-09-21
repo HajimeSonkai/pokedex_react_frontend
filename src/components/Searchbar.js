@@ -15,7 +15,7 @@ const Searchbar = () => {
 
   const onClickHandler = async () => {
     console.log("procurando:", search);
-    const lower = search.toLowerCase()
+    const lower = search.toLowerCase();
     const result = await searchpokemon(lower);
     setPokemondata(result);
     console.log("pokeAPI achou: ", result);
@@ -32,13 +32,15 @@ const Searchbar = () => {
   return (
     <div className="searchbar-container">
       <div className="searchbar">
-        <input placeholder="Buscar o pokemon" onChange={onChangeHandler} />
-      </div>
-      <div className="searchbar-btn">
-        <button onClick={onClickHandler}>Buscar</button>
-      </div>
-      <div className="searchbar-btn">
-        <button onClick={onClickRandon}>random</button>
+        <div className="search">
+          <input placeholder="Buscar o pokemon" onChange={onChangeHandler} />
+        </div>
+        <div className="search-btn">
+          <button onClick={onClickHandler}>Buscar</button>
+        </div>
+        <div className="random-btn">
+          <button onClick={onClickRandon}>random</button>
+        </div>
       </div>
       {pokemondata ? (
         <div>
