@@ -48,4 +48,8 @@
     .searchbar-container {
     flex-direction: column;
     }
+
+    .search-card {
+        margin-top: 5px;
+    }
 }
