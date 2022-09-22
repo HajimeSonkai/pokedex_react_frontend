@@ -39,11 +39,11 @@ const Searchbar = () => {
           <button onClick={onClickHandler}>Buscar</button>
         </div>
         <div className="random-btn">
-          <button onClick={onClickRandon}>random</button>
+          <button onClick={onClickRandon}>Random</button>
         </div>
       </div>
       {pokemondata ? (
-        <div>
+        <div className="search-card">
           <Pokemoncard pokemon={pokemondata} />
         </div>
       ) : null}

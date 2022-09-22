@@ -3,13 +3,17 @@
 }
 
 .App {
+  background-color: #121212;
+  padding-right: 10px;
+  padding-bottom: 55px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items:stretch;
+  justify-items: center;
 }
 
 .ref {
+  color: white;
   padding: 20px;
   align-self: center;
 }

@@ -695,7 +695,7 @@
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10px 10px 10px 0px;
   flex: 1;
 }
@@ -704,6 +704,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  justify-self: flex-start;
 }
 
 .nameandheart {
@@ -711,11 +712,12 @@
 }
 
 .card-top h3 {
+  font-size: larger;
   color: black;
   text-transform: capitalize;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  padding: 1px 2px;
+  padding: 1px
 }
 
 .card-botton {
@@ -724,13 +726,34 @@
   justify-content: space-between;
 }
 
+.fav-button {
+  font-size: 100%;
+  display: flex;
+  border: none;
+  background: none;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.id {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.id p {
+  font-size: medium;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 1px 2px;
+}
+
 /* css tipos */
 .pokemon-type {
   display: flex;
 }
 
 .pokemon-type p {
-  font-size: large;
+  font-size: 16px;
   font-weight: 800;
   display: flex;
   text-transform: capitalize;
@@ -862,27 +885,7 @@
   border-radius: 5px;
 }
 
-.fav-button {
-  font-size: 100%;
-  display: flex;
-  border: none;
-  background: none;
-  padding: 4px;
-  cursor: pointer;
-}
-
-.id {
-  font-weight: bold;
-  font-size: 120%;
-}
-
-.id p {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  padding: 1px 2px;
-}
-
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 780px) {
   .pokemon-grass-card {
     width: auto;
     background-position: 50px;
@@ -890,6 +893,12 @@
   }
 
   .pokemon-fire-card {
+    width: auto;
+    background-size: 400px;
+    background-position: 50px;
+  }
+
+  .pokemon-normal-card {
     width: auto;
     background-size: 400px;
     background-position: 50px;
@@ -1001,278 +1010,281 @@
   }
 }
 
-@media screen and (max-width: 509px) {
+@media screen and (max-width: 361px) {
+  .outer-card {
+    width: auto;
+  }
+
   .pokemon-grass-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
   }
 
   .pokemon-grass-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-fire-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
-    background-position-y: -100px;
+    /* background-position: 140px;
+    background-position-y: -100px; */
   }
 
   .pokemon-fire-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-water-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
-    background-position-y: -160px;
+    /* background-position: 140px;
+    background-position-y: -160px; */
   }
 
   .pokemon-water-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-bug-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
-    background-position-y: -100px;
+    /* background-position: 140px;
+    background-position-y: -100px; */
   }
 
   .pokemon-bug-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-normal-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -70px; */
   }
 
   .pokemon-normal-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-poison-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
-    background-position-y: -180px;
+    /* background-position: 140px; */
+    background-position-y: -220px;
   }
 
   .pokemon-poison-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-electric-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-electric-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-ground-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-ground-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-fairy-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -190px; */
   }
 
   .pokemon-fairy-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-fighting-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-fighting-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-psychic-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-psychic-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-rock-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-rock-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-ghost-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-ghost-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-ice-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-ice-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-dragon-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-dragon-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-dark-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-dark-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-steel-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-steel-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
   .pokemon-flying-card {
-    width: 480px;
+    width: 100%;
     background-size: 400px;
-    background-position: 140px;
+    /* background-position: 140px; */
     /* background-position-y: -100px; */
   }
 
   .pokemon-flying-card .pokemon-image {
-    width: 148px;
-    height: 148px;
+    width: 100px;
+    height: 100px;
     margin-top: 0px;
     margin-right: 10px;
     padding: 0px;
   }
 
-  .card-body {
-    font-size: xx-large;
-    justify-content: space-evenly;
+  .outer-card h3 {
+   font-size: larger;
   }
 }
