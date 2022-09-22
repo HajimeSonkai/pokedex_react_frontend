@@ -15,7 +15,7 @@ function App() {
   const [totalPages, setTotalPages] = useState(0);
   const [favorites, setFavorites] = useState([]);
 
-  const itensperpage = 42;
+  const itensperpage = 56;
 
   useEffect(() => {
     console.log("Carregando");

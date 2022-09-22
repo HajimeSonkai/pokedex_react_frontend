@@ -12,7 +12,7 @@ const Pokemoncard = (props) => {
   const [picurl, setPicurl] = useState(normal);
   console.log("pokemon map:", pokemon.types[0].type.name);
 
-  const heart = favoritedPokemons.includes(pokemon.name) ? "❤️" : "💔️";
+  const heart = favoritedPokemons.includes(pokemon.name) ? "🤍️" : "🖤️";
   const clickheart = () => {
     console.log("favoritando");
     updateFavoritedPokemons(pokemon.name);
